@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="icon" href="imagenes/favicon-32x32.png" type="image/png">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" 
+          rel="stylesheet" 
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" 
+          crossorigin="anonymous">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./css/estilos.css">
+</head>
+<body>
+
+    <!-- ===================== HEADER ===================== -->
+    <header>
+        <img src="imagenes/logo286chico.png" alt="Logo del estudio de arquitectura">
+
+        <!-- Hamburger menu -->
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <!-- Navigation menu -->
+        <nav>
+            <ul id="menu">
+                <li><a href="#">Home</a></li>
+                <li><a href="./page/proyectos.html">Proyectos</a></li>
+                <li><a href="./page/contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- ===================== VIDEO ===================== -->
+    <div class="video-container">
+        <video autoplay loop muted playsinline class="video">
+            <source src="videos/286video.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <!-- ===================== MAIN CONTENT ===================== -->
+    <main>
+
+        <!-- Garabato / Qué hacemos -->
+        <section class="garabato">
+            <img src="imagenes/garabato.png" alt="Garabato decorativo">
+            <div class="garabato-contenido">
+                <h1>¿QUÉ HACEMOS?</h1>
+                <p>
+                    Somos un estudio creativo multidisciplinario con base en Buenos Aires, 
+                    donde la arquitectura, el interiorismo y el diseño visual se unen a través 
+                    de la pasión por nuestro trabajo, ofreciendo soluciones integrales y personalizadas.
+                </p>
+            </div>
+            <div class="garabato2">
+                 <img src="imagenes/garabato2.png" alt="Garabato decorativo">
+                
+            </div>
+        </section>
+
+        <!-- ===================== CAROUSEL DE PROYECTOS ===================== -->
+        <section id="proyectosCarousel" class="carousel slide" data-bs-ride="carousel">
+
+            <div class="carousel-inner">
+
+                <!-- Proyecto 1 -->
+                <div class="carousel-item active">
+                    <div class="d-flex flex-column flex-md-row align-items-center justify-content-center">
+                        <img src="./imagenes/imagencarru1.jpg" class="d-block w-100 carousel-image" alt="Diseño de proyectos">
+                        <p class="carousel-text mt-3 mt-md-0 ms-md-4">
+                            Investigamos y conceptualizamos a partir de las necesidades de cada proyecto, 
+                            acompañando a nuestros clientes en cada paso del proceso e integrando todas 
+                            sus aristas para crear no solo espacios, sino también objetos de diseño únicos.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Proyecto 2 -->
+                <div class="carousel-item">
+                    <div class="d-flex flex-column flex-md-row align-items-center justify-content-center">
+                        <img src="./imagenes/imagencarru2.jpg" class="d-block w-100 carousel-image" alt="Proyectos integrales">
+                        <p class="carousel-text mt-3 mt-md-0 ms-md-4">
+                            Para transformar cualquier espacio, gestionamos proyectos de forma integral, 
+                            abarcando desde la concepción del lugar y la planificación estratégica, hasta 
+                            el desarrollo de una identidad visual sólida que refleje su esencia única.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Proyecto 3 -->
+                <div class="carousel-item">
+                    <div class="d-flex flex-column flex-md-row align-items-center justify-content-center">
+                        <img src="./imagenes/proyectos/Milanga & Co. - Montevideo y Corrientes - 72.jpg" 
+                             class="d-block w-100 carousel-image" alt="Gerenciamiento de obras">
+                        <p class="carousel-text mt-3 mt-md-0 ms-md-4">
+                            Garantizamos la correcta ejecución de tus proyectos. Nos encargamos de la dirección y 
+                            el gerenciamiento de obras, para asegurar que cada diseño se materialice con precisión 
+                            y calidad, cumpliendo con los plazos establecidos.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Carousel controls -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#proyectosCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Anterior</span>
+            </button>
+
+            <button class="carousel-control-next" type="button" data-bs-target="#proyectosCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Siguiente</span>
+            </button>
+
+        </section>
+
+    </main>
+
+    <!-- ===================== MARQUEE CONTACTO ===================== -->
+    <div class="marquee">
+        <div class="marquee-inner">
+            <span>@estudio286 - info@estudio286.com - </span>
+            <span>@estudio286 - info@estudio286.com - </span>
+        </div>
+        <div class="marquee-inner">
+            <span>@estudio286 - info@estudio286.com - </span>
+            <span>@estudio286 - info@estudio286.com - </span>
+        </div>
+        <div class="marquee-inner">
+            <span>@estudio286 - info@estudio286.com - </span>
+            <span>@estudio286 - info@estudio286.com - </span>
+        </div>
+    </div>
+
+    <!-- ===================== FOOTER ===================== -->
+    <footer>
+        <div class="footer-center">
+            <p>Oficina 286, Palacio Barolo. Avenida de Mayo 1370, CABA, Buenos Aires, Argentina.</p>
+        </div>
+        <div class="footer-social">
+            <a href="https://wa.me/+542215046257">
+                <img src="./imagenes/iconos/wha.png" alt="WhatsApp">
+            </a>
+            <a href="https://www.instagram.com/estudio.286/">
+                <img src="./imagenes/iconos/insta.png" alt="Instagram">
+            </a>
+        </div>
+    </footer>
+
+    <!-- ===================== SCRIPTS ===================== -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" 
+            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" 
+            crossorigin="anonymous"></script>
+
+    <script>
+        // Hamburger menu toggle
+        document.addEventListener("DOMContentLoaded", function() {
+            const hamburger = document.getElementById('hamburger');
+            const menu = document.getElementById('menu');
+
+            if (hamburger && menu) {
+                hamburger.addEventListener('click', () => {
+                    menu.classList.toggle('active');
+                });
+            }
+        });
+    </script>
+
+</body>
+</html>
