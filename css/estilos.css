@@ -194,7 +194,7 @@ nav ul li a:hover {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin-left: 40px;
+  margin-left: 10px;
   max-width: 500px;
   text-align: left;
 }
@@ -448,6 +448,7 @@ footer a img:hover {
   }
   .garabato img {
     margin-bottom: 20px;
+    max-width: 400px;
   }
   .garabato-contenido {
     margin-left: 0;
@@ -496,6 +497,9 @@ footer a img:hover {
     width: 22px;
     height: 22px;
   }
+  .footer-left img {
+    height: 30px;
+  }
   .video-container {
     height: 70vh;
     padding-top: 56.25%;
@@ -541,6 +545,9 @@ footer a img:hover {
   .footer-social a img {
     width: 18px;
     height: 18px;
+  }
+  .footer-left img {
+    height: 30px;
   }
   .video-container {
     height: 60vh;

@@ -102,7 +102,7 @@ nav {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	margin-left: 40px;
+	margin-left: 10px;
 	max-width: 500px;
 	text-align: left;
 	h1 {
@@ -349,6 +349,7 @@ footer {
 		padding: 50px 10px;
 		img {
 			margin-bottom: 20px;
+			max-width: 400px;
 		}
 	}
 	.garabato-contenido {
@@ -406,6 +407,12 @@ footer {
 			}
 		}
 	}
+
+	.footer-left img {
+        height: 30px;
+    }
+
+	
 	 .video-container {
         height: 70vh;         
         padding-top: 56.25%;
@@ -458,6 +465,7 @@ footer {
 	.footer-center {
 		p {
 			font-size: 0.7rem;
+			
 		}
 	}
 	.footer-social {
@@ -468,6 +476,10 @@ footer {
 			}
 		}
 	}
+
+	.footer-left img {
+        height: 30px;
+    }
 	
     .video-container {
         height: 60vh;
