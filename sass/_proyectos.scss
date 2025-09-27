@@ -1,17 +1,19 @@
 @use "./variables" as*;
+
+
 .proyectos-galeria {
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
 	gap: 30px;
 	padding: 50px 20px;
 	background-color: $background-color_2;
-	margin: 0 0 50px 0;
+	margin-bottom: 50px;
 }
 .proyecto-item {
 	position: relative;
 	overflow: hidden;
 	border-radius: 8px;
-	box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 	img {
 		width: 100%;
 		height: 350px;
@@ -23,19 +25,13 @@
 		img {
 			transform: scale(1.05);
 		}
-		.proyecto-overlay {
-			opacity: 1;
-		}
 	}
 }
 .proyecto-overlay {
 	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	background-color: $background-color_4;
-	color: $color_5;
+	inset: 0;
+	background-color: $background-color_3;
+	color: $color_4;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -49,13 +45,10 @@
 		letter-spacing: 2px;
 	}
 	a {
-		color: $color_6;
+		color: $color_5;
 		text-decoration: none;
 		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
+		inset: 0;
 		display: flex;
 		justify-content: center;
 		align-items: center;
@@ -63,7 +56,7 @@
 			z-index: 1;
 		}
 		&:hover {
-			color: $color_6;
+			color: $color_5;
 			text-decoration: none;
 		}
 	}

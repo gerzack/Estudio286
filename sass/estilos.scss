@@ -1,45 +1,48 @@
+@charset "UTF-8";
 @use "./variables" as*;
 @use "./keyframes" as*;
 @use "./proyectos" as*;
 
 
-
-/* reset*/
+/**************RESET***********************/
 * {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
 	font-family: $font-family_1;
 }
-
-/* body*/
+/**********************BASE********************/
 body {
 	line-height: 1.6;
 	background-color: $background-color_1;
 	color: $color_1;
-	
+	&:has(header) {
+		padding-top: calc(var(--header-height, 0px));
+	}
 }
-
-body:has(header) {
-  padding-top: calc(var(--header-height, 0px));
+main {
+	padding: 0;
+	max-width: 100%;
+	margin: 0;
 }
-
+/**********************HEADER****************************/
 header {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
 	padding: 15px 20px;
 	background-color: $background-color_2;
-	box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 	position: sticky;
+	top: 0;
 	z-index: 1000;
-	top:0;
 	height: auto;
 	img {
 		height: 50px;
 		max-width: 100%;
 	}
 }
+/*******************NAV*************************/
 nav {
 	ul {
 		list-style: none;
@@ -62,19 +65,22 @@ nav {
 		}
 	}
 }
+
+/******************************VIDEO**********************/
 .video-container {
 	width: 100%;
 	max-width: 100%;
-	margin: 0 auto 0;
+	margin: 0 auto;
 	position: relative;
 	overflow: hidden;
 	video {
 		width: 100%;
-		height: 100%;
+		height: 100vh;
 		object-fit: cover;
 		display: block;
 	}
 }
+/***************************GARABATO**********************/
 .garabato {
 	display: flex;
 	justify-content: center;
@@ -100,22 +106,17 @@ nav {
 		margin-bottom: 10px;
 		font-size: 2em;
 		color: $color_3;
-		text-align: left;
-		font-family: $font-family_1;
 		font-weight: bold;
+		text-align: left;
 	}
 	p {
 		text-align: justify;
 		line-height: 1.3;
 	}
 }
-main {
-	padding: 0;
-	max-width: 100%;
-	margin: 0 0 0 0;
-}
+/*******************************CAROUSEL**************************/
 #proyectosCarousel {
-	background-color: $background-color_3;
+	background-color: $background-color_4;
 	padding: 20px;
 	margin-bottom: 0;
 	.carousel-item {
@@ -138,12 +139,10 @@ main {
 }
 .carousel-image {
 	flex: 1 1 auto;
-	width: 100%;
 	max-width: 300px;
-	height: auto;
 	border-radius: 12px;
 	object-fit: cover;
-	box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+	box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
 	transition: transform 0.2s ease;
 	&:hover {
 		transform: scale(1.02);
@@ -156,15 +155,16 @@ main {
 	font-size: 1rem;
 	line-height: 1.6;
 	text-align: justify;
-	color: $color_4;
-	transition: all 0.3s ease;
+	color: $color_6;
 	margin-top: 15px;
+	transition: all 0.3s ease;
 }
+/**********************MARQUEE******************************/
 .marquee {
 	width: 100%;
 	overflow: hidden;
 	background: #000;
-	color: $color_5;
+	color: $color_4;
 	font-size: 1rem;
 	font-family: $font-family_1;
 	padding: 8px 0;
@@ -178,13 +178,13 @@ main {
 	animation: scroll-left 15s linear infinite;
 	span {
 		margin-right: 2rem;
-		text-shadow: 0 0 8px rgba(255,255,255,0.8);
+		text-shadow: 0 0 8px rgba(255, 255, 255, 0.8);
 	}
 }
-
+/*************************FOOTER**********************/
 footer {
 	background-color: $background-color_5;
-	color: $color_5;
+	color: $color_4;
 	padding: 20px;
 	display: flex;
 	justify-content: space-between;
@@ -204,20 +204,44 @@ footer {
 	}
 }
 .footer-center {
-	flex-grow: 1;
+	flex: 1;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	text-align: center;
+	padding: 10px;
+}
+.footer-left {
+	img {
+		height: 50px;
+		width: auto;
+	}
 }
 .footer-social {
 	display: flex;
 	gap: 15px;
 	align-items: center;
 }
+
+/*************************CONTACTO**********************/
 .contact-form-container {
-	width: 100%;
-	padding: 20px;
-	background-color: $background-color_6;
+	display: flex;
+	flex-wrap: nowrap;
+	gap: 20px;
+	>* {
+		flex: 1 1 50%;
+		height: 500px;
+		box-sizing: border-box;
+	}
+	iframe {
+		border: none;
+		border-radius: 8px;
+	}
 }
 .contact-form {
+	padding: 20px;
+	background-color: $background-color_6;
+	border-radius: 10px;
 	.form-control {
 		width: 100%;
 		padding: 0.5rem 1.25rem;
@@ -226,7 +250,7 @@ footer {
 		background-color: $background-color_7;
 		&:focus {
 			border-color: $border-color_1;
-			box-shadow: 0 0 0 0.25rem rgba(0,0,0,0.1);
+			box-shadow: 0 0 0 0.25rem rgba(0, 0, 0, 0.1);
 		}
 	}
 	.form-label {
@@ -243,7 +267,7 @@ footer {
 		transition: background-color 0.3s, color 0.3s;
 		&:hover {
 			background-color: $background-color_8;
-			color: $color_5;
+			color: $color_4;
 		}
 	}
 }
@@ -253,16 +277,8 @@ footer {
 	font-weight: bold;
 	vertical-align: top;
 }
-.pagina-contacto {
-	min-height: 100vh;
-	display: flex;
-	flex-direction: column;
-	main {
-		min-height: calc(100vh - 100px);
-		display: flex;
-		flex-direction: column;
-	}
-}
+
+/*************************HAMBURGUESA**********************/
 .hamburger {
 	display: none;
 	position: absolute;
@@ -283,39 +299,42 @@ footer {
 		transition: 0.3s;
 	}
 }
-.garabato2 {
-	display: none;
-}
-
+/*************************MEDIA QUERIES**********************/
 @media (max-width: 768px) {
 	header {
 		flex-direction: column;
 		align-items: center;
 		padding: 10px;
 		.img {
-    height: 40px;   /* achicamos también el logo si hace falta */
-  }
+			height: 40px;
+		}
 	}
 	nav {
 		margin-top: 15px;
 		ul {
-			display: none;
 			flex-direction: column;
 			position: absolute;
-			top: 60px;
-			right: 0;
-			width: 200px;
-			padding: 10px;
+			top: 100%;
+			left: 0;
+			width: 100%;
+			max-height: 0;
+			overflow: hidden;
 			background-color: $background-color_2;
-			box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-			border-radius: 5px;
 			z-index: 9999;
+			padding: 0 20px;
 			li {
-				margin: 0 10px;
+				margin: 15px 0;
+				a {
+					font-size: 1.2rem;
+					color: $color_7;
+					font-weight: bold;
+				}
 			}
 		}
 		ul.active {
-			display: flex;
+			max-height: 60vh;
+			padding: 20px;
+			box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 		}
 	}
 	.hamburger {
@@ -343,8 +362,6 @@ footer {
 		.carousel-item {
 			>div {
 				flex-direction: column;
-				align-items: center;
-				text-align: center;
 				gap: 20px;
 				padding: 20px 0;
 			}
@@ -352,25 +369,27 @@ footer {
 	}
 	.carousel-image {
 		flex: none;
-		width: auto;
 		max-width: 90%;
 	}
 	.carousel-text {
 		flex: none;
-		width: auto;
 		max-width: 90%;
 		font-size: 0.9rem;
 		text-align: justify;
 	}
+	.contact-form-container {
+		flex-direction: column;
+		>* {
+			flex: 1 1 100%;
+			height: 400px;
+		}
+	}
 	footer {
 		flex-direction: row;
 		justify-content: space-between;
-		align-items: center;
 		padding: 15px;
 	}
 	.footer-center {
-		flex: 1;
-		text-align: center;
 		margin-bottom: 0;
 		p {
 			font-size: 0.8rem;
@@ -389,19 +408,17 @@ footer {
 	}
 }
 
+/*************************MEDIA QUERIES**********************/
+
 @media (max-width: 480px) {
-
-
-
 	header {
 		flex-direction: column;
 		align-items: center;
 		padding: 5px;
 		.img {
-    height: 20px;   /* achicamos también el logo si hace falta */
-  }
+			height: 20px;
+		}
 	}
-
 	nav {
 		ul {
 			li {
@@ -438,23 +455,22 @@ footer {
 		}
 	}
 	.video-container {
-		height: 500px;
+		height: 50vh;
 	}
 	.garabato-contenido {
 		p {
 			text-align: justify;
 			max-width: 360px;
-			font-size: 0.8rem;
-			line-height: 1.3;
+			font-size: 0.9rem;
+			line-height: 1.5;
+			margin-bottom: 1rem;
 			text-justify: inter-word;
 		}
-		.garabato-contenido p:last-child {
-         text-align: left; // o center
-        }
-		h1 {max-width: 360px;
+		h1 {
+			max-width: 360px;
 			text-align: left;
-			line-height: 1;
-			
-		}	
+			line-height: 1.2;
+			margin-bottom: 1rem;
+		}
 	}
 }
