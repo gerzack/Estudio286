@@ -35,8 +35,8 @@
 
 .proyecto-overlay {
 	position: absolute;
-	inset: 0; // top, left, width y height en shorthand
-	background-color: $overlay-dark; // variable para overlay semitransparente
+	inset: 0; 
+	background-color: $overlay-dark;
 	color: $color_5;
 	display: flex;
 	justify-content: center;
@@ -51,7 +51,7 @@
 		text-align: center;
 		text-transform: uppercase;
 		letter-spacing: 2px;
-		z-index: 2; // texto encima del overlay
+		z-index: 2;
 		position: relative;
 	}
 
@@ -67,7 +67,7 @@
 		z-index: 2;
 
 		p {
-			z-index: 3; // texto encima del link
+			z-index: 3;
 			position: relative;
 		}
 
