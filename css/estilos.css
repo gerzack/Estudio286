@@ -29,7 +29,7 @@
   gap: 30px;
   padding: 50px 20px;
   background-color: #fff;
-  margin-bottom: 50px;
+  margin: 0 0 50px 0;
 }
 
 .proyecto-item {
@@ -48,17 +48,21 @@
 .proyecto-item:hover img {
   transform: scale(1.05);
 }
+.proyecto-item:hover .proyecto-overlay {
+  opacity: 1;
+}
 
 .proyecto-overlay {
   position: absolute;
   inset: 0;
   background-color: rgba(0, 0, 0, 0.6);
-  color: #fff;
+  color: white;
   display: flex;
   justify-content: center;
   align-items: center;
   opacity: 0;
   transition: opacity 0.3s ease;
+  z-index: 1;
 }
 .proyecto-overlay p {
   font-size: 1.5em;
@@ -66,18 +70,23 @@
   text-align: center;
   text-transform: uppercase;
   letter-spacing: 2px;
+  z-index: 2;
+  position: relative;
 }
 .proyecto-overlay a {
-  color: white;
+  color: black;
   text-decoration: none;
   position: absolute;
   inset: 0;
   display: flex;
   justify-content: center;
   align-items: center;
+  background: transparent;
+  z-index: 2;
 }
 .proyecto-overlay a p {
-  z-index: 1;
+  z-index: 3;
+  position: relative;
 }
 .proyecto-overlay a:hover {
   color: white;
